@@ -41,6 +41,35 @@ public class Options {
     private static Boolean enableWatcher = true;
 
     /**
+     * An exclusion pattern (folders or matching this patter will not be indexed)
+     */
+    private static String excludePattern = null;
+
+    /**
+     * Created by popesad
+     *
+     * <p>Gets the excludePattern variable</p>
+     *
+     * @return	String
+     */
+    public static String getExcludePattern(){
+        return Options.excludePattern;
+    }
+
+    /**
+     * Created by popesad
+     *
+     * <p>Sets the excludePattern variable</p>
+     *
+     * @param	newValue List<String> The new value
+     *
+     * @return	void
+     */
+    public static void setExcludePattern(String newValue){
+        Options.excludePattern = newValue;
+    }
+
+    /**
      * Created by popesad
      *
      * <p>Gets the enableWatcher variable</p>

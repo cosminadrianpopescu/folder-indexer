@@ -68,7 +68,20 @@ the server port and type the command and enter.
 
 ## Searching for a file in the tree: 
 
-`file-regular <file>`: performs a regular search (this means that the file has
+* `.file-regular <file>`: performs a regular search (this means that the file has
 to have a part of it's path equals with your query)
+* `.file-regex <file>`: performs a regular expression search of a file name
+* `.file-wild <file>`: performs a wild search (using `*`) of a files
 
-`file-regex <file>`: performs a regular expression search
+## Searching for terms in the index: 
+
+* `.query-regular <term>`: perform a regular search of a term. 
+* `.query-regex <term>`: performs a regular expression search of a term
+* `.query-wild <term>`: performs a wild search query
+
+TODO
+========================================
+
+At the moment there is not possible to query a phrase. You can only search
+for terms, which means that also you cannot search for files which contain
+spaces. 

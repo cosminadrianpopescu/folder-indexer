@@ -37,7 +37,7 @@ public class App {
     public static void main(String[] args) throws IOException {
         int c;
         String v;
-        Getopt opt = new Getopt("folder-indexer", args, "p:e:d:w");
+        Getopt opt = new Getopt("folder-indexer", args, "p:e:d:x:w");
         while ((c = opt.getopt()) != -1) {
             v = opt.getOptarg();
             if (v == null && c != 'w'){
@@ -49,6 +49,9 @@ public class App {
                 }
                 else if (c == 'e'){
                     Options.setExtensions(v);
+                }
+                else if (c == 'x'){
+                    Options.setExcludePattern(v);
                 }
                 else if (c == 'd'){
                     Options.setFolder(v);

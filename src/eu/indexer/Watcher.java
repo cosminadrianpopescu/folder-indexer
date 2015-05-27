@@ -95,6 +95,11 @@ public class Watcher implements Runnable {
      */
     private void registerAll(final Path start) throws IOException {
         // register directory and sub-directories
+        if (Options.getExcludePattern() != null){
+            if (start.toFile().getName().matches(Options.getExcludePattern())){
+                return ;
+            }
+        }
         Files.walkFileTree(start, new SimpleFileVisitor<Path>() {
             @Override
             public FileVisitResult preVisitDirectory(Path dir, BasicFileAttributes attrs)

@@ -94,6 +94,11 @@ public class Lucene {
      */
     public static void index(File f){
         logger.info("Processing " + f);
+        if (Options.getExcludePattern() != null){
+            if (f.getName().matches(Options.getExcludePattern())){
+                return ;
+            }
+        }
         if (f.isDirectory()){
             for (File _f: f.listFiles()){
                 Lucene.index(_f);
