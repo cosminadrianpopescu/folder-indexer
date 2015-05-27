@@ -27,6 +27,8 @@ Command line arguments:
   extension will be indexed
 * `-d`: The folder to index and watch
 * `-m`: Maximum number of results that a query will return
+* `-x`: Represents a pattern. If set, the files matching this patternn will be
+  excluded from indexing
 * `-w`: This option does not take any argument. 
 
 Usage

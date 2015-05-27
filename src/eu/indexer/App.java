@@ -30,6 +30,7 @@ public class App {
         System.out.println("\t-e\tThe list of file extensions to index.");
         System.out.println("\t-d\tThe folder to index.");
         System.out.println("\t-m\tThe maximum number of results to display from a query (default 5000).");
+        System.out.println("\t-x\tIf set, any files mathing this pattern in their name or path will not be indexed.");
         System.out.println("\t-w\t(boolean) If set, then disable the folder watcher (default enabled).");
         System.exit(0);
     }
